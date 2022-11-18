@@ -1,0 +1,23 @@
+.text-heading-xl {
+    @apply font-jaka font-bold text-[24px] leading-[30px];
+}
+
+.text-heading-l {
+    @apply font-jaka font-bold text-[18px] leading-[23px];
+}
+
+.text-heading-m {
+    @apply font-jaka font-bold text-[15px] leading-[19px];
+}
+
+.text-heading-s {
+    @apply font-jaka font-bold text-[12px] leading-[15px] tracking-[2.4px];
+}
+
+.text-body-m {
+    @apply font-jaka font-medium text-[13px] leading-[23px];
+}
+
+.text-body-s {
+    @apply font-jaka font-bold text-[12px] leading-[15px];
+}

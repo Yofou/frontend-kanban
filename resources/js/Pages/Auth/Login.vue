@@ -1,11 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import { Head, useForm } from '@inertiajs/inertia-vue3';
 
-defineProps({
-    canResetPassword: Boolean,
-    status: String,
-});
+defineProps<{
+    canResetPassword: boolean;
+    status?: string;
+    title: string;
+}>();
 
 const form = useForm({
     email: '',
@@ -14,22 +15,18 @@ const form = useForm({
 });
 
 const submit = () => {
-    form.post(route('login'), {
+    form.post('/login', {
         onFinish: () => form.reset('password'),
     });
 };
 </script>
 
 <template>
-    <GuestLayout>
+    <GuestLayout :title="title">
         <Head title="Log in" />
 
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-            {{ status }}
-        </div>
-
         <form @submit.prevent="submit">
-            <h2>hi</h2>
+            <h2>hello world</h2>
         </form>
     </GuestLayout>
 </template>
